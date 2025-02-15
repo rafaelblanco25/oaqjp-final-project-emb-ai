@@ -5,7 +5,7 @@ app = Flask("EmotionDetection")
 
 @app.route("/")
 def render_index_page():
-    return render_template('index.html')
+    return render_template('templates/index.html')
 
 @app.route("/emotionDetector")
 def emotionDetector():
