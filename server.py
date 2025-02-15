@@ -9,12 +9,20 @@ def render_index_page():
 
 @app.route("/emotionDetector")
 def emotion_detector_route():
+    """ 
+    Emotion detector route function.
+
+    Args:
+
+    Returns:
+
+        float: result to be displayed to the user.
+    """
     text_to_analyze = request.args.get("textToAnalyze")
     response = emotion_detector(text_to_analyze)
 
     if response.get("dominant_emotion") is None:
         return "Invalid text! Please try again!"
-    
     anger_response = f"'anger': {response.get('anger')}"
     disgust_response = f"'disgust': {response.get('disgust')}"
     fear_response = f"'fear': {response.get('fear')}"
