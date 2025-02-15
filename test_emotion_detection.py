@@ -1,7 +1,7 @@
 from EmotionDetection.emotion_detection import emotion_detector
 import unittest
 
-def test_emotion_detector(unittest.TestCase):
+class test_emotion_detector(unittest.TestCase):
     def test_emotion_detector(self):
         self.assertEqual(emotion_detector("I am glad this happened")['dominant_emotion'], "joy")
         self.assertEqual(emotion_detector("I am glad this happened")['dominant_emotion'], "anger")
